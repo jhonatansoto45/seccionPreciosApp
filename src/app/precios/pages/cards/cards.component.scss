@@ -1,0 +1,136 @@
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
+  gap: 10px;
+}
+
+.card:nth-child(2) {
+  background-color: var(--purple-ligth);
+  border: none;
+
+  .card__title,
+  .card__plan,
+  .card__description,
+  .card__price,
+  .card__planner,
+  .card__include,
+  .card__text {
+    color: var(--blue-dark);
+  }
+
+  .card__check::before {
+    background-color: var(--blue-dark);
+  }
+
+  .card__btn {
+    background-color: var(--blue-dark);
+  }
+}
+
+.card {
+  font-family: "Inter", sans-serif;
+  border: 1px solid var(--border);
+  background-color: var(--card__background);
+  width: 350px;
+  height: 600px;
+  padding: 30px;
+  border-radius: 22px;
+  margin-top: 35px;
+}
+
+.card__title {
+  font-size: 2.9rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.card__plan {
+  margin-bottom: 25px;
+  color: var(--grey);
+}
+
+.card__description {
+  color: var(--grey);
+  margin-bottom: 32px;
+}
+
+.card__price {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 19px;
+
+  .card__usd {
+    font-size: 1rem;
+  }
+
+  .card__planner {
+    font-size: 1rem;
+    color: var(--grey);
+    font-weight: 500;
+  }
+}
+
+.card__include {
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--white);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.card__list {
+  list-style: none;
+  font-family: inherit;
+  font-weight: 400;
+  margin-bottom: 35px;
+
+  .card__item {
+    color: var(--white);
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .card__check::before {
+    display: inline-block;
+    content: "\2713 ";
+    color: var(--white);
+    padding: 1px 3px 7px 4px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--purple-dark);
+    margin-right: 15px;
+  }
+}
+
+.card__btn {
+  width: 100%;
+  padding: 20px;
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 35px;
+  background-color: var(--purple-dark);
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 500px) {
+  section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    height: 650px;
+  }
+}

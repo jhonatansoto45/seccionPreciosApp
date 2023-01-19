@@ -1,0 +1,17 @@
+<header class="header">
+  <h1 class="header__info">Precios</h1>
+  <h1 class="header__title">Desbloquea tu creatividad.</h1>
+  <h1 class="header__title">¡Prueba el plan Pro gratis!</h1>
+  <p class="header__description">
+    Comienza tu prueba gratuita con acceso a todo <br />
+    el contenido de manera gratuita por 7 días.
+  </p>
+  <div class="header__switch">
+    <span class="header__span">Mensual</span>
+    <label class="switch">
+      <input type="checkbox" [(ngModel)]="switch" (click)="cambiarPrecios()" />
+      <span class="slider"></span>
+    </label>
+    <span class="header__span">Anualmente (-40%)</span>
+  </div>
+</header>

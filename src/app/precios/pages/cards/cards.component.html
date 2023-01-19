@@ -1,0 +1,36 @@
+<section>
+  <div class="card" *ngFor="let plan of arrayCards">
+    <h1 class="card__title">{{ plan.titulo }}</h1>
+    <p class="card__plan">{{ plan.plan }}</p>
+    <p class="card__description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem cumque.
+    </p>
+    <span class="card__price"
+      >${{ plan.precio }}<small class="card__usd">USD</small>
+      <small class="card__planner">/{{plan.periodo}}</small>
+    </span>
+    <p class="card__include">¿Qué está incluido?</p>
+    <ul class="card__list">
+      <!-- after -->
+      <li class="card__item">
+        <span class="card__check"></span>
+        <span class="card__text">
+          Acceso de por vida a los cursos que completes
+        </span>
+      </li>
+      <li class="card__item">
+        <span class="card__check"></span>
+        <span class="card__text">Acceso a todos los cursos</span>
+      </li>
+      <li class="card__item">
+        <span class="card__check"></span>
+        <span class="card__text">Acceso a todos los proyectos</span>
+      </li>
+      <li class="card__item">
+        <span class="card__check"></span>
+        <span class="card__text">Acceso a Discord</span>
+      </li>
+    </ul>
+    <button class="card__btn">Empezar</button>
+  </div>
+</section>

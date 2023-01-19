@@ -1,0 +1,112 @@
+.header {
+  text-align: center;
+}
+
+.header__info {
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.header__title {
+  font-family: "Inter", sans-serif;
+  font-size: 3.5rem;
+  color: var(--white);
+  margin: 20px 0;
+}
+
+.header__description {
+  color: var(--grey);
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+}
+
+.header__switch {
+  width: 320px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__span {
+  font-weight: 500;
+  color: var(--white);
+}
+
+/* ================================SWITCHE=================================*/
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--grey);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.6em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--purple-dark);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--purple-dark);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+@media screen and (max-width: 500px) {
+  .header__title {
+    font-size: 2.7rem;
+  }
+
+  .header__description {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .header__switch {
+    width: 100px;
+    gap: 16px;
+  }
+}
